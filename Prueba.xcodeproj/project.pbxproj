@@ -13,6 +13,8 @@
 		DD3223B723C631AE0037AE9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3223B523C631AE0037AE9C /* Main.storyboard */; };
 		DD3223B923C631AF0037AE9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD3223B823C631AF0037AE9C /* Assets.xcassets */; };
 		DD3223BC23C631AF0037AE9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD3223BA23C631AF0037AE9C /* LaunchScreen.storyboard */; };
+		DD8EDB3623D328EA00C66B32 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8EDB3523D328EA00C66B32 /* Card.swift */; };
+		DDE2CF7623D0DBA50061739A /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDE2CF7523D0DBA50061739A /* Concentration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		DD3223B823C631AF0037AE9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD3223BB23C631AF0037AE9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DD3223BD23C631AF0037AE9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DD8EDB3523D328EA00C66B32 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		DDE2CF7523D0DBA50061739A /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		DD3223AE23C631AE0037AE9C /* Prueba */ = {
 			isa = PBXGroup;
 			children = (
+				DDE2CF7523D0DBA50061739A /* Concentration.swift */,
 				DD3223AF23C631AE0037AE9C /* AppDelegate.swift */,
 				DD3223B123C631AE0037AE9C /* SceneDelegate.swift */,
 				DD3223B323C631AE0037AE9C /* ViewController.swift */,
@@ -63,6 +68,7 @@
 				DD3223B823C631AF0037AE9C /* Assets.xcassets */,
 				DD3223BA23C631AF0037AE9C /* LaunchScreen.storyboard */,
 				DD3223BD23C631AF0037AE9C /* Info.plist */,
+				DD8EDB3523D328EA00C66B32 /* Card.swift */,
 			);
 			path = Prueba;
 			sourceTree = "<group>";
@@ -139,6 +145,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD3223B423C631AE0037AE9C /* ViewController.swift in Sources */,
+				DDE2CF7623D0DBA50061739A /* Concentration.swift in Sources */,
+				DD8EDB3623D328EA00C66B32 /* Card.swift in Sources */,
 				DD3223B023C631AE0037AE9C /* AppDelegate.swift in Sources */,
 				DD3223B223C631AE0037AE9C /* SceneDelegate.swift in Sources */,
 			);
