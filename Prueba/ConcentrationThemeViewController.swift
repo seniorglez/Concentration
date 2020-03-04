@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ConcentrationThemeViewController: UIViewController {
+class ConcentrationThemeViewController: UIViewController,UISplitViewControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,18 @@ class ConcentrationThemeViewController: UIViewController {
         "Faces":"😀😁😂🤣😃😄😅😆😉😊😋😎"
     ]
     
+    override func awakeFromNib() {
+        splitViewController?.delegate = self
+    }
+    
+    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewCOntroller: UIViewController, onto primaryViewController: UIViewController)-> Bool{
+        if let cvc = secondaryViewCOntroller as? ConcentrationViewController {
+            if cvc.theme == nil {
+                return true
+            }
+        }
+        return false
+    }
     private var concentrationViewController: ConcentrationViewController?{
         return splitViewController?.viewControllers.last as? ConcentrationViewController
     }
@@ -32,13 +44,19 @@ class ConcentrationThemeViewController: UIViewController {
         if let cvc = concentrationViewController {
             if let themeName = (sender as? UIButton)?.currentTitle, let theme = themes[themeName]{
                            cvc.theme=theme
-                       } else {
-                performSegue(withIdentifier: "Choose Theme", sender: sender)
-                   }
+                       }
+        }else if let cvc = lastSeguedConcentrationViewController{
+            if let themeName = (sender as? UIButton)?.currentTitle, let theme = themes[themeName]{
+                cvc.theme=theme
+            }
+            navigationController?.pushViewController(cvc, animated: true)
+        }else{
+            performSegue(withIdentifier: "Choose Theme", sender: sender)
+        }
             
         }
            
-    }
+  
     private var lastSeguedConcentrationViewController: ConcentrationViewController?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
